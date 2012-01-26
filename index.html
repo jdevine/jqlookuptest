@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+   <!--
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+   -->
+<script src="http://cdn.jquerytools.org/1.2.6/full/jquery.tools.min.js"></script>
+
+    <script type="text/javascript">
+ $(document).ready(function(){
+   $("a").click(function(event){
+     event.preventDefault();
+     $(this).hide("slow");
+   });
+ });
+
+
+
+  (function($,undefined){
+    $.widget( 
+      "jd.lookup", 
+      $.ui.autocomplete,
+      { 
+        options: {
+          
+
+        },  
+      }
+    );
+
+
+
+  } (jQuery));   
+
+
+      
+    </script>
+  </head>
+  <body>
+    <a href="http://jquery.com/">jQuery</a>
+
+    <form>
+      <input type="hidden" name="artist_id" id="artist_id" />
+      <div>
+        <label>Name</label>
+        <input name="artist_name" id="artist_name" value="artist name" class="lookup" idfield="artist_id" ></input>
+        
+      </div>
+    </form>
+
+
+  </body>
+</html>
+
